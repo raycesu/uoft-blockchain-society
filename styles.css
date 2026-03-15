@@ -162,25 +162,6 @@ img {
   box-shadow: 0 14px 24px rgba(93, 67, 167, 0.36);
 }
 
-.nav-cta-email {
-  padding: 0.5rem 0.9rem;
-  background: #eef1f4;
-  color: #3f4652;
-  border-color: #d3dae3;
-  box-shadow: none;
-  font-weight: 600;
-  font-size: 0.92rem;
-  letter-spacing: 0.01em;
-}
-
-.nav-cta-email:hover {
-  transform: none;
-  box-shadow: none;
-  background: #e6eaef;
-  border-color: #c6ced8;
-  color: #2f3642;
-}
-
 .club-logo-link {
   width: 42px;
   height: 42px;
@@ -251,12 +232,12 @@ img {
   border-bottom: 1px solid #d6dbe4;
 }
 
-.waterfront-video {
+.waterfront-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.66;
-  filter: saturate(0.7) contrast(0.9) brightness(0.82);
+  opacity: 0.62;
+  filter: saturate(0.72) contrast(0.9) brightness(0.82);
 }
 
 .waterfront-overlay {
@@ -572,7 +553,7 @@ img {
   overflow: hidden;
   border-radius: var(--radius-lg);
   border: none;
-  background: #ffffff;
+  background: transparent;
   box-shadow: none;
   padding: 1.4rem 0;
 }
@@ -590,12 +571,12 @@ img {
 
 .partners-ticker::before {
   left: 0;
-  background: linear-gradient(to right, #ffffff, rgba(255, 255, 255, 0));
+  background: linear-gradient(to right, #f4efff, rgba(244, 239, 255, 0));
 }
 
 .partners-ticker::after {
   right: 0;
-  background: linear-gradient(to left, #ffffff, rgba(255, 255, 255, 0));
+  background: linear-gradient(to left, #f4efff, rgba(244, 239, 255, 0));
 }
 
 .partners-track {
