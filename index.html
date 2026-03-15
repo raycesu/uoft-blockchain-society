@@ -90,12 +90,11 @@
     </header>
 
     <main>
-      <section class="waterfront-section" aria-label="Toronto waterfront skyline image">
+      <section class="waterfront-section" aria-label="Homepage feature image">
         <div class="waterfront-media">
           <img class="waterfront-image" src="assets/waterfront.jpg" alt="" aria-hidden="true" />
           <div class="waterfront-overlay" aria-hidden="true"></div>
-          <div class="waterfront-text" data-skyline-reveal>
-            <p>Toronto Waterfront</p>
+          <div class="waterfront-text">
             <h2>Building the Future of Blockchain at UofT.</h2>
           </div>
           <div class="city-line" aria-hidden="true"></div>
@@ -150,7 +149,7 @@
             <div class="partners-track">
               <div class="partner-ticker-item">
                 <span class="partner-ticker-logo">
-                  <img src="assets/EY.png" alt="EY logo" loading="lazy" />
+                  <img src="assets/EY.png?v=2026" alt="EY logo" loading="lazy" />
                 </span>
                 <span class="partner-ticker-name">EY</span>
               </div>
@@ -192,7 +191,7 @@
               </div>
               <div class="partner-ticker-item">
                 <span class="partner-ticker-logo">
-                  <img src="assets/luxor tech.png" alt="Luxor Tech logo" loading="lazy" />
+                  <img src="assets/luxor.png" alt="Luxor Tech logo" loading="lazy" />
                 </span>
                 <span class="partner-ticker-name">Luxor Tech</span>
               </div>
@@ -204,7 +203,7 @@
               </div>
               <div class="partner-ticker-item" aria-hidden="true">
                 <span class="partner-ticker-logo">
-                  <img src="assets/EY.png" alt="" loading="lazy" />
+                  <img src="assets/EY.png?v=2026" alt="" loading="lazy" />
                 </span>
                 <span class="partner-ticker-name">EY</span>
               </div>
@@ -246,7 +245,7 @@
               </div>
               <div class="partner-ticker-item" aria-hidden="true">
                 <span class="partner-ticker-logo">
-                  <img src="assets/luxor tech.png" alt="" loading="lazy" />
+                  <img src="assets/luxor.png" alt="" loading="lazy" />
                 </span>
                 <span class="partner-ticker-name">Luxor Tech</span>
               </div>
@@ -293,22 +292,6 @@
           navToggle.classList.toggle("nav-toggle-open");
         });
 
-        const waterfrontSection = document.querySelector(".waterfront-section");
-        const skylineReveal = document.querySelector("[data-skyline-reveal]");
-        const setSkylineReveal = () => {
-          if (!waterfrontSection || !skylineReveal) return;
-          const rect = waterfrontSection.getBoundingClientRect();
-          const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
-          const progress = Math.min(
-            Math.max((viewportHeight - rect.top) / (viewportHeight + rect.height * 0.35), 0),
-            1
-          );
-          skylineReveal.style.setProperty("--skyline-reveal", progress.toFixed(3));
-        };
-
-        setSkylineReveal();
-        window.addEventListener("scroll", setSkylineReveal, { passive: true });
-        window.addEventListener("resize", setSkylineReveal);
       </script>
     </footer>
   </body>

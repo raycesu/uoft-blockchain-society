@@ -253,18 +253,15 @@ img {
 }
 
 .waterfront-text {
-  --skyline-reveal: 0;
   position: absolute;
   left: 50%;
-  bottom: 14%;
+  top: 10%;
   z-index: 2;
   width: min(94vw, 980px);
   text-align: center;
   color: #f2f6ff;
   text-shadow: 0 12px 35px rgba(9, 14, 22, 0.45);
-  transform: translateX(-50%) translateY(calc((1 - var(--skyline-reveal)) * 3.5rem));
-  clip-path: inset(calc((1 - var(--skyline-reveal)) * 100%) 0 0 0);
-  transition: transform 0.18s linear, clip-path 0.18s linear;
+  transform: translateX(-50%);
 }
 
 .waterfront-text p {
@@ -1140,7 +1137,7 @@ img {
   }
 
   .waterfront-text {
-    bottom: 16%;
+    top: 12%;
   }
 
   .footer-links {
