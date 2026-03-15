@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Team · UofT Blockchain Society</title>
+    <meta
+      name="description"
+      content="Meet the executive team leading the UofT Blockchain Society at the University of Toronto."
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Fraunces:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="logo">
+          <div class="logo-mark">
+            <img src="assets/utb-logo.png" alt="UofT Blockchain Society logo" />
+          </div>
+          <div class="logo-text">
+            <span class="logo-title">UofT Blockchain Society</span>
+            <span class="logo-subtitle">University of Toronto</span>
+          </div>
+        </a>
+        <nav class="nav">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="events.html" class="nav-link">Events</a>
+          <a href="team.html" class="nav-link nav-link-active">Team</a>
+          <a href="contact.html" class="nav-link nav-cta">Join / Contact</a>
+        </nav>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+          <span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <p class="eyebrow">Our executive team</p>
+          <h1>Students leading blockchain at UofT.</h1>
+          <p class="page-hero-text">
+            Customize this page with your current executive team, advisors, and volunteers.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-header">
+            <h2>Executives</h2>
+            <p>The student team coordinating events, education, and research for UofT Blockchain Society.</p>
+          </div>
+          <div class="team-grid">
+            <article class="team-card">
+              <div class="avatar avatar-placeholder">R</div>
+              <h3>Rayce Su</h3>
+              <p class="team-role">Co‑President</p>
+              <p class="team-meta">UofT Blockchain Society</p>
+            </article>
+            <article class="team-card">
+              <div class="avatar avatar-placeholder">W</div>
+              <h3>Weiqi Zhu</h3>
+              <p class="team-role">Co‑President</p>
+              <p class="team-meta">UofT Blockchain Society</p>
+            </article>
+            <article class="team-card">
+              <div class="avatar avatar-placeholder">M</div>
+              <h3>Marcus Leung</h3>
+              <p class="team-role">Operations Associate</p>
+              <p class="team-meta">Operations · UofT</p>
+            </article>
+            <article class="team-card">
+              <div class="avatar avatar-placeholder">N</div>
+              <h3>Nadine Tarigan</h3>
+              <p class="team-role">Operations Associate</p>
+              <p class="team-meta">Operations · UofT</p>
+            </article>
+            <article class="team-card">
+              <div class="avatar avatar-placeholder">C</div>
+              <h3>Christine Liu</h3>
+              <p class="team-role">Research &amp; Investments Associate</p>
+              <p class="team-meta">Research &amp; Investments · UofT</p>
+            </article>
+            <article class="team-card">
+              <div class="avatar avatar-placeholder">J</div>
+              <h3>Jason Luu</h3>
+              <p class="team-role">Research &amp; Investments Associate</p>
+              <p class="team-meta">Research &amp; Investments · UofT</p>
+            </article>
+            <article class="team-card">
+              <div class="avatar avatar-placeholder">A</div>
+              <h3>Alan Lee</h3>
+              <p class="team-role">Research &amp; Investments Associate</p>
+              <p class="team-meta">Research &amp; Investments · UofT</p>
+            </article>
+            <article class="team-card">
+              <div class="avatar avatar-placeholder">J</div>
+              <h3>Jack Guan</h3>
+              <p class="team-role">Research &amp; Investments Associate</p>
+              <p class="team-meta">Research &amp; Investments · UofT</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt">
+        <div class="container split">
+          <div>
+            <h2>Advisors & collaborators</h2>
+            <p>
+              You can list faculty advisors, alumni mentors, or partner organizations that
+              support the club.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Interested in getting involved?</h3>
+            <p>
+              If you are a faculty member, alumni, or industry professional who would like to
+              collaborate, please reach out.
+            </p>
+            <a href="contact.html" class="btn full-width">Contact the club</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <p class="footer-title">UofT Blockchain Society</p>
+          <p class="footer-text">Student club at the University of Toronto.</p>
+        </div>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="events.html">Events</a>
+          <a href="team.html">Team</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <p class="footer-meta">
+          © <span id="year"></span> UofT Blockchain Society · Toronto, Canada
+        </p>
+      </div>
+      <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+        const navToggle = document.querySelector(".nav-toggle");
+        const nav = document.querySelector(".nav");
+        navToggle?.addEventListener("click", () => {
+          nav?.classList.toggle("nav-open");
+          navToggle.classList.toggle("nav-toggle-open");
+        });
+      </script>
+    </footer>
+  </body>
+</html>
