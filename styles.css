@@ -66,6 +66,7 @@ img {
 }
 
 .header-inner {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -118,6 +119,9 @@ img {
 .nav {
   display: flex;
   align-items: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   gap: 0.35rem;
 }
 
@@ -128,6 +132,12 @@ img {
   color: var(--text-soft);
   border: 1px solid transparent;
   transition: all 0.16s ease-out;
+}
+
+.nav-link-main {
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
 }
 
 .nav-link:hover {
@@ -756,6 +766,7 @@ img {
 @media (max-width: 720px) {
   .nav {
     position: absolute;
+    left: auto;
     right: 1.25rem;
     top: 3rem;
     flex-direction: column;
