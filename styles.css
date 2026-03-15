@@ -571,9 +571,9 @@ img {
   position: relative;
   overflow: hidden;
   border-radius: var(--radius-lg);
-  border: 1px solid #d8cdf5;
+  border: none;
   background: #ffffff;
-  box-shadow: var(--shadow-subtle);
+  box-shadow: none;
   padding: 1.4rem 0;
 }
 
@@ -603,7 +603,7 @@ img {
   align-items: center;
   gap: 2.6rem;
   width: max-content;
-  animation: partnersTicker 42s linear infinite;
+  animation: partnersTicker 38s linear infinite;
   padding: 0 2.2rem;
 }
 
