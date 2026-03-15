@@ -454,10 +454,10 @@ img {
 .partners-track {
   display: flex;
   align-items: center;
-  gap: 1.4rem;
+  gap: 2.6rem;
   width: max-content;
   animation: partnersTicker 42s linear infinite;
-  padding: 0 1.4rem;
+  padding: 0 2.2rem;
 }
 
 .partner-ticker-item {
@@ -465,8 +465,8 @@ img {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 10rem;
-  padding: 0.25rem 0.4rem;
+  min-width: 12rem;
+  padding: 0.25rem 0.8rem;
 }
 
 .partner-ticker-logo {
@@ -945,7 +945,7 @@ img {
   }
 
   .partner-ticker-item {
-    min-width: 8.4rem;
+    min-width: 10rem;
   }
 }
 
