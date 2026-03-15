@@ -88,28 +88,47 @@
     </header>
 
     <main>
-      <section class="page-hero">
+      <section class="page-hero events-page-hero">
         <div class="container">
           <p class="eyebrow">Events & calendar</p>
-          <h1>Talks, workshops, and meetups.</h1>
+          <h1>Events Calendar</h1>
         </div>
       </section>
 
       <section class="section">
         <div class="container">
           <div class="section-header">
-            <h2>Upcoming events</h2>
+            <h2>Upcoming Events</h2>
           </div>
-          <div class="timeline upcoming-timeline">
+          <p class="upcoming-empty">Coming soon</p>
+        </div>
+      </section>
+
+      <section class="section section-alt past-events-section">
+        <div class="container">
+          <div class="section-header">
+            <h2>Past Events</h2>
+          </div>
+          <div class="timeline past-timeline">
             <div class="timeline-item">
               <div class="timeline-dot"></div>
               <div class="timeline-content">
                 <h3>UofT Blockchain Conference 2026</h3>
                 <p class="timeline-date">February 2026</p>
-                <div class="timeline-photo event-gallery" aria-label="UofT Blockchain Conference 2026 photo gallery">
-                  <img src="assets/Conf 1.heic" alt="UofT Blockchain Conference 2026 event photo 1" />
-                  <img src="assets/Conf 2.jpg" alt="UofT Blockchain Conference 2026 event photo 2" />
-                  <img src="assets/Conf 3.JPEG" alt="UofT Blockchain Conference 2026 event photo 3" />
+                <div
+                  class="timeline-photo timeline-carousel"
+                  data-carousel
+                  aria-label="UofT Blockchain Conference 2026 photo gallery"
+                >
+                  <div class="carousel-track">
+                    <img src="assets/Conf 1.heic" alt="UofT Blockchain Conference 2026 event photo 1" />
+                    <img src="assets/Conf 2.jpeg" alt="UofT Blockchain Conference 2026 event photo 2" />
+                    <img src="assets/Fall.HEIC" alt="UofT Blockchain Conference 2026 event photo 3" />
+                  </div>
+                  <div class="carousel-controls">
+                    <button class="carousel-btn carousel-prev" type="button" aria-label="Previous photo">←</button>
+                    <button class="carousel-btn carousel-next" type="button" aria-label="Next photo">→</button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -131,9 +150,19 @@
               <div class="timeline-content">
                 <h3>Kiln Co-Founder Lecture on Staking</h3>
                 <p class="timeline-date">December 2025</p>
-                <div class="timeline-photo event-gallery" aria-label="Kiln Co-Founder Lecture on Staking photo gallery">
-                  <img src="assets/KILN.JPG" alt="Kiln Co-Founder Lecture on Staking event photo 1" />
-                  <img src="assets/KILN 2.JPG" alt="Kiln Co-Founder Lecture on Staking event photo 2" />
+                <div
+                  class="timeline-photo timeline-carousel"
+                  data-carousel
+                  aria-label="Kiln Co-Founder Lecture on Staking photo gallery"
+                >
+                  <div class="carousel-track">
+                    <img src="assets/KILN.JPG" alt="Kiln Co-Founder Lecture on Staking event photo 1" />
+                    <img src="assets/KILN 2.JPG" alt="Kiln Co-Founder Lecture on Staking event photo 2" />
+                  </div>
+                  <div class="carousel-controls">
+                    <button class="carousel-btn carousel-prev" type="button" aria-label="Previous photo">←</button>
+                    <button class="carousel-btn carousel-next" type="button" aria-label="Next photo">→</button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -156,7 +185,7 @@
                 <h3>Wallet V Trading Challenge</h3>
                 <p class="timeline-date">October 2025</p>
                 <div class="timeline-photo">
-                  <img src="assets/walletvevent.JPG" alt="Wallet V Trading Challenge event photo" />
+                  <img src="assets/walletvevent2.JPG" alt="Wallet V Trading Challenge event photo" />
                 </div>
               </div>
             </div>
@@ -188,6 +217,31 @@
         navToggle?.addEventListener("click", () => {
           nav?.classList.toggle("nav-open");
           navToggle.classList.toggle("nav-toggle-open");
+        });
+
+        document.querySelectorAll("[data-carousel]").forEach((carousel) => {
+          const track = carousel.querySelector(".carousel-track");
+          const slides = Array.from(track?.querySelectorAll("img") || []);
+          const prevBtn = carousel.querySelector(".carousel-prev");
+          const nextBtn = carousel.querySelector(".carousel-next");
+          let index = 0;
+
+          const render = () => {
+            if (!track || !slides.length) return;
+            track.style.transform = `translateX(-${index * 100}%)`;
+          };
+
+          prevBtn?.addEventListener("click", () => {
+            index = (index - 1 + slides.length) % slides.length;
+            render();
+          });
+
+          nextBtn?.addEventListener("click", () => {
+            index = (index + 1) % slides.length;
+            render();
+          });
+
+          render();
         });
       </script>
     </footer>
