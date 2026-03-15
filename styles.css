@@ -60,6 +60,13 @@ img {
   border-bottom: none;
 }
 
+.home-page .site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
 .header-inner {
   position: relative;
   display: flex;
