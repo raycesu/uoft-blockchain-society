@@ -711,6 +711,12 @@ img {
   color: #34244d;
 }
 
+.upcoming-timeline .timeline-content h3 {
+  font-family: "Space Grotesk", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 1.13rem;
+  font-weight: 600;
+}
+
 .timeline-photo {
   width: min(100%, 34rem);
   border-radius: var(--radius-lg);
@@ -722,7 +728,20 @@ img {
 .timeline-photo img {
   display: block;
   width: 100%;
-  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.event-gallery {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.event-gallery img {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
 }
 
 .placeholder-photo {
