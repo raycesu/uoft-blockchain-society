@@ -51,6 +51,10 @@ img {
   padding: 0 1.25rem;
 }
 
+.site-header .container {
+  max-width: 1280px;
+}
+
 .site-header {
   position: sticky;
   top: 0;
@@ -70,6 +74,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   padding: 0.7rem 0.25rem;
   gap: 1rem;
 }
@@ -119,9 +124,16 @@ img {
 .nav {
   display: flex;
   align-items: center;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  justify-content: center;
+  flex-wrap: wrap;
+  order: 2;
+  width: 100%;
+  margin-top: 0.1rem;
+  padding: 0.45rem;
+  border-radius: 14px;
+  border: 1px solid rgba(148, 163, 184, 0.26);
+  background: rgba(9, 12, 35, 0.65);
+  backdrop-filter: blur(12px);
   gap: 0.35rem;
 }
 
@@ -138,6 +150,11 @@ img {
   font-size: 1rem;
   font-weight: 600;
   padding: 0.5rem 1rem;
+}
+
+.nav-link-social {
+  font-size: 0.82rem;
+  padding: 0.4rem 0.75rem;
 }
 
 .nav-link:hover {
@@ -861,6 +878,9 @@ img {
     top: 3rem;
     flex-direction: column;
     align-items: flex-end;
+    width: min(92vw, 24rem);
+    max-height: calc(100vh - 5rem);
+    overflow-y: auto;
     background: rgba(4, 6, 26, 0.96);
     padding: 0.7rem;
     border-radius: 1rem;
@@ -869,6 +889,11 @@ img {
     pointer-events: none;
     transform: translateY(-6px);
     transition: opacity 0.15s ease, transform 0.15s ease;
+  }
+
+  .nav-link {
+    width: 100%;
+    text-align: right;
   }
 
   .nav-open {
