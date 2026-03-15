@@ -854,15 +854,15 @@ img {
 
 .avatar {
   width: 100%;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 4 / 5;
   border-radius: 16px;
-  background: #f3eeff;
+  background: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
   border: 1px solid #dfd4fa;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.75rem;
 }
 
 .avatar-image {
