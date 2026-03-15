@@ -190,8 +190,9 @@ img {
 
 .hero-inner {
   display: grid;
-  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.2fr);
-  gap: 3rem;
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 760px;
+  gap: 1.2rem;
   align-items: center;
 }
 
@@ -407,65 +408,33 @@ img {
   color: var(--text-soft);
 }
 
-.logo-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.9rem;
-}
-
-.logo-item {
-  border-radius: var(--radius-md);
-  padding: 1.1rem;
-  background: radial-gradient(circle at 0 0, rgba(192, 132, 252, 0.12), rgba(15, 23, 42, 0.96));
-  border: 1px solid rgba(148, 163, 184, 0.35);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.8rem;
-  color: var(--text-soft);
-  text-align: center;
-}
-
 .logo-note {
   margin-top: 1.1rem;
   font-size: 0.82rem;
   color: var(--text-soft);
 }
 
-.partner-banner {
-  position: relative;
-  overflow: hidden;
-  border-radius: var(--radius-lg);
-  border: 1px solid rgba(148, 163, 184, 0.4);
-  background: radial-gradient(circle at 0 0, rgba(192, 132, 252, 0.16), rgba(15, 23, 42, 0.98));
-  padding: 0.6rem 0;
-  mask-image: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
+.company-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.9rem;
 }
 
-.partner-track {
-  display: inline-flex;
-  gap: 0.75rem;
-  padding-left: 1.5rem;
-  animation: partner-marquee 26s linear infinite;
+.company-card {
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  background: #ffffff;
+  min-height: 96px;
+  padding: 0.95rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.partner-pill {
-  padding: 0.48rem 0.9rem;
-  border-radius: var(--radius-pill);
-  border: 1px solid rgba(148, 163, 184, 0.6);
-  background: rgba(15, 23, 42, 0.96);
-  font-size: 0.78rem;
-  white-space: nowrap;
-  color: var(--ivory);
-}
-
-@keyframes partner-marquee {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+.company-card img {
+  max-height: 56px;
+  width: 100%;
+  object-fit: contain;
 }
 
 .split {
@@ -812,9 +781,15 @@ img {
   }
 
   .feature-grid,
-  .logo-grid,
+  .company-grid,
   .team-grid {
     grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 980px) and (min-width: 721px) {
+  .company-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
