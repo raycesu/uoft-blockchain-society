@@ -229,14 +229,14 @@ img {
 .waterfront-media {
   position: relative;
   width: 100vw;
-  height: 100vh;
-  height: 100svh;
-  min-height: 100vh;
-  min-height: 100svh;
+  height: calc(100vh + 12px);
+  height: calc(100svh + 12px);
+  min-height: calc(100vh + 12px);
+  min-height: calc(100svh + 12px);
   margin-left: calc(50% - 50vw);
   overflow: hidden;
   background: #161d27;
-  border-bottom: 6px solid #f7f7f9;
+  border-bottom: none;
 }
 
 .waterfront-image {
@@ -1125,10 +1125,10 @@ img {
   }
 
   .waterfront-media {
-    height: 100vh;
-    height: 100svh;
-    min-height: 100vh;
-    min-height: 100svh;
+    height: calc(100vh + 12px);
+    height: calc(100svh + 12px);
+    min-height: calc(100vh + 12px);
+    min-height: calc(100svh + 12px);
   }
 
   .waterfront-text {
