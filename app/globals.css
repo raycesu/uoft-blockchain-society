@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    @apply m-0 bg-bg text-text;
+    background-image: radial-gradient(circle at 0% 0%, #faf7ff 0%, #f7f7f9 45%, #f9f9fb 100%);
+  }
+
+  a {
+    @apply text-inherit no-underline;
+  }
+
+  img {
+    @apply block max-w-full;
+  }
+
+  .font-display {
+    font-family: var(--font-fraunces), system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+  }
+}
+
+@layer utilities {
+  .text-hero-gradient {
+    background: linear-gradient(120deg, #2b2040, #61409f, #8f6ef0);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-partners-ticker {
+    animation: none !important;
+    transform: translateX(0) !important;
+  }
+}
+
+/* Match live site carousel controls exactly */
+.carousel-controls {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  padding: 0.5rem 0.65rem 0.65rem;
+  background: linear-gradient(to top, #f7f2ff, rgba(247, 242, 255, 0.4));
+}
+
+.carousel-btn {
+  border: 1px solid #d0c2f7;
+  background: #ffffff;
+  color: #4a3682;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 999px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1;
+  padding: 1px 6px;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.carousel-btn:hover {
+  transform: translateY(-1px);
+  border-color: #ae95ef;
+  box-shadow: 0 8px 18px rgba(93, 67, 167, 0.2);
+}
